@@ -29,8 +29,10 @@ def encryptOrDecrypt(stringy,dec_or_enc, enc = True):
 inpt = input()
 k = int(input())
 enc,dec = have(k)
+# encrypt the input by an k 
 ans = encryptOrDecrypt(inpt.upper(),enc)
 print(ans)
+# return original input by decrypting the cypher
 inpt = encryptOrDecrypt(ans, dec, enc=False)
 print(inpt)
 
