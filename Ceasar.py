@@ -35,9 +35,3 @@ print(ans)
 # return original input by decrypting the cypher
 inpt = encryptOrDecrypt(ans, dec, enc=False)
 print(inpt)
-
-
-
-
-
-

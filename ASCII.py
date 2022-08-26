@@ -10,12 +10,13 @@ def have():
         alphaRes += chr(nxt1 + start) + chr(nxt2 + start)
     
     encryptor = {}
+    decryptor = {}
     for idx, val in enumerate(alpha):
         encryptor[val] = alphaRes[idx] + alphaRes[idx + 1]
     return encryptor
 
 encryptor = have()
-word = "Hello"
+word = input()
 ans= ""
 for ltr in word.upper():
     ans += encryptor[ltr]
