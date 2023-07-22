@@ -33,6 +33,16 @@ class Cryptography():
                 itr = chr((((ord(ltr)-ord("A")) + (self.steps * coef)) % ALPH)+ord("A"))
             res+=itr
         return res
+    def positional_encryption_operation(self, stry, coef):
+        res = ""
+        for ind,ltr in enumerate(stry):
+            itr = ""
+            if ord(ltr) >= ord("a"):
+                itr = chr((((ord(ltr)-ord("a")) + ((self.steps + ind + 1)* coef)) % ALPH)+ord("a"))
+            elif ord(ltr) >= ord("A"):
+                itr = chr((((ord(ltr)-ord("A")) + ((self.steps + ind + 1)* coef)) % ALPH)+ord("A"))
+            res+=itr
+        return res
     def crypt_word(self, stry):
         res = self.encryption_operation(stry, 1)
         return res
